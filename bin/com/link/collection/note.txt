@@ -1,0 +1,5 @@
+Java所有的集合都在java.util.*下
+
+Java中集合分为两大类：
+1. 以单个元素存储，超级父接口是java.util.Collection
+2. 以键值对存储，超级父接口是java.util.Map

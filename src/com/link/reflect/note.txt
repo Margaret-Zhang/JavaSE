@@ -1,0 +1,25 @@
+反射机制的作用：通过java语言中的反射机制可以读和修改字节码文件。
+
+反射相关类：
+	java.lang.Class：代表整个字节码，代表整个类
+	java.lang.reflect.Method：代表字节码文件中的方法字节码
+	java.lang.Constructor：代表字节码文件中的构造器字节码
+	java.lang.Field：代表字节码文件中的属性字节码
+
+获取Class的三种方式：
+1. Class.forName(String)
+2. obj.getClass() java中任何一个对象都有getClass方法
+3. class属性，java中任何一个数据类型(包括基本数据类型)都有class属性
+
+通过反射实例化对象：
+Class对象.newInstance() 调用此类的无参构造器
+
+获取文件的绝对路径
+String path = Thread.currentThread().getContextClassLoader().getResource("<file name>").getPath();
+
+java的类加载器：
+	启动类加载器专门加载：${JAVA_HOME}/lib/dt.jar
+	扩展类加载器专门加载：${JAVA_HOME}/jre/lib/ext/*.jar
+	应用类加载器专门加载：${CLASSPATH}
+java为了保证类加载的安全，使用了双亲委派机制，优先从启动类加载器加载，直到加载为止。
+

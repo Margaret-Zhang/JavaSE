@@ -1,0 +1,18 @@
+java中的注解(annotation)是一种引用数据类型
+注解创建格式：[修饰符列表] @interface 注解类型名{}
+注解使用格式：@注解名
+注解可以出现在类上、属性上、方法上、变量上等等。
+
+java.lang包下的注解类型：
+@Deprecated：已过时。不鼓励程序员使用这样的元素，通常是因为它很危险或存在更好的选择。
+@Override：表示一个方法打算重写父类中的方法。
+@SuppressWarnnings 指示应该在元素中取消显示指定的编译器警告
+
+元注解：用来标注注解类的注解。
+@Target：用来指明被标注的注解可以用在哪些位置上，@Target(ElementType.METHOD)表示这个注解只能用在方法上
+@Retention：用来指明被标注的注解最终保存在那个位置，@Retention(RetentionPolicy.SOURCE)表示这个注解最终存放在java源文件中
+									  @Retention(RetentionPolicy.RUNTIME)表示这个注解最终存放在class字节码文件中，并且可以使用反射机制获取到
+@Deprecated：已过时。
+
+自定义注解：
+自定义的注解类有属性时，必须给注解的属性值赋值。
